@@ -35,7 +35,7 @@ export class PassengerDashboardComponent implements OnInit{
   }
   handleEdit(event : Passenger){
     this.passengerService
-      .updatePassengers(event)
+      .updatePassenger(event)
       .subscribe((data : Passenger)=>{
         this.passengers = this.passengers.map((passenger : Passenger)=>{
           if(passenger.id === event.id){
